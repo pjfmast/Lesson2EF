@@ -13,11 +13,11 @@ namespace Lesson2 {
 
             var team2 = teamsManagementContext.Teams
                 .Include(team => team.Enrolled)
-                .FirstOrDefault(team => team.Group == "Groep-2");
+                .FirstOrDefault(team => team.Group == "Groep-1");
 
-            Console.WriteLine(team2.Title);
+            Console.WriteLine($"Team {team2.Title} has the following members:");
             foreach (var member in team2.Enrolled) {
-                Console.WriteLine(member.Name);
+                Console.WriteLine($"\t{member.Name}");
             }
 
 
