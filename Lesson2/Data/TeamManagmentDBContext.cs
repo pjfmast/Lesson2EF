@@ -7,7 +7,7 @@ using System.Text;
 namespace Lesson2EF.Data {
     class TeamManagmentDBContext : DbContext {
         public DbSet<Member> Members { get; set; }
-        public DbSet<Team> Teams { get; set; }
+        //public DbSet<Team> Teams { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
             optionsBuilder.UseSqlServer(

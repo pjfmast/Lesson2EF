@@ -8,7 +8,7 @@ using System.Linq;
 namespace Lesson2 {
     class Program {
         static void Main(string[] args) {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Team management");
             using var teamsManagementContext = new TeamManagmentDBContext();
 
             teamsManagementContext.Members.Add(new Member { Name = "Jeroen", Email = "jeroen@breda.nl" });
@@ -41,7 +41,6 @@ namespace Lesson2 {
             Console.WriteLine("after update");
             Member after = teamsManagementContext.Members.FirstOrDefault(Member => Member.Name == "Henk");
             Console.WriteLine(after.Email);
-            Console.WriteLine(after.Team.Title);
 
         }
     }
